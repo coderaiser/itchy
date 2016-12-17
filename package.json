@@ -1,0 +1,52 @@
+{
+  "name": "itchy",
+  "version": "1.0.0",
+  "author": "coderaiser <mnemonic.enemy@gmail.com> (https://github.com/coderaiser)",
+  "description": "Drop-in replacement of async.eachSeries",
+  "homepage": "http://github.com/coderaiser/itchy",
+  "main": "lib/itchy.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/coderaiser/itchy.git"
+  },
+  "keywords": [
+    "series",
+    "async",
+    "each",
+    "eachSeries",
+    "array",
+    "iterate"
+  ],
+  "scripts": {
+    "test": "tape test/*.js",
+    "watcher": "nodemon -w test -w lib --exec",
+    "watch:test": "npm run watcher -- npm test",
+    "watch:coverage": "npm run watcher -- npm run coverage",
+    "lint": "eslint lib test",
+    "build": "redrun clean init 6to5 legacy:* bundle minify",
+    "init": "mkdirp dist legacy",
+    "minify": "minify dist/itchy.js > dist/itchy.min.js",
+    "wisdom": "npm run build",
+    "clean": "rimraf legacy dist",
+    "coverage": "nyc npm test",
+    "report": "nyc report --reporter=text-lcov | coveralls",
+    "6to5": "buble lib -o legacy/lib",
+    "legacy:index": "echo \"module.exports = require('./lib/itchy');\" > legacy/index.js",
+    "bundle:base": "browserify -s itchy --ng false",
+    "bundle": "npm run bundle:base -- -r ./legacy/lib/itchy.js:itchy ./legacy/lib/itchy.js -o dist/itchy.js"
+  },
+  "dependencies": {},
+  "license": "MIT",
+  "devDependencies": {
+    "browserify": "^13.1.1",
+    "buble": "^0.14.2",
+    "coveralls": "^2.11.9",
+    "eslint": "^3.10.2",
+    "minify": "^2.0.5",
+    "mkdirp": "^0.5.1",
+    "nodemon": "^1.11.0",
+    "nyc": "^10.0.0",
+    "redrun": "^5.0.1",
+    "tape": "^4.5.1"
+  }
+}
