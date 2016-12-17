@@ -31,6 +31,8 @@ In old `node.js` environments that not fully supports `es2015`, `itchy` could be
 var itchy = require('itchy/legacy');
 ```
 
+For using in browser without `browserify`, `webpack` or `rollup` path `node_modules/itchy/dist/itchy.min.js` could be used.
+
 ## License
 
 MIT
