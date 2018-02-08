@@ -38,7 +38,7 @@
   "dependencies": {},
   "license": "MIT",
   "devDependencies": {
-    "browserify": "^15.2.0",
+    "browserify": "^16.0.0",
     "buble": "^0.18.0",
     "coveralls": "^3.0.0",
     "eslint": "^4.0.0",
