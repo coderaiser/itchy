@@ -18,22 +18,22 @@
     "iterate"
   ],
   "scripts": {
-    "test": "tape test/*.js",
-    "watcher": "nodemon -w test -w lib --exec",
-    "watch:test": "npm run watcher -- npm test",
-    "watch:coverage": "npm run watcher -- npm run coverage",
-    "lint": "eslint lib test",
-    "build": "redrun clean init 6to5 legacy:* bundle minify",
-    "init": "mkdirp dist legacy",
-    "minify": "minify dist/itchy.js > dist/itchy.min.js",
-    "wisdom": "npm run build",
-    "clean": "rimraf legacy dist",
-    "coverage": "nyc npm test",
-    "report": "nyc report --reporter=text-lcov | coveralls",
-    "6to5": "buble lib -o legacy/lib",
-    "legacy:index": "echo \"module.exports = require('./lib/itchy');\" > legacy/index.js",
-    "bundle:base": "browserify -s itchy --ng false",
-    "bundle": "npm run bundle:base -- -r ./legacy/lib/itchy.js:itchy ./legacy/lib/itchy.js -o dist/itchy.js"
+    "test": "madrun test",
+    "watcher": "madrun watcher",
+    "watch:test": "madrun watch:test",
+    "watch:coverage": "madrun watch:coverage",
+    "lint": "madrun lint",
+    "build": "madrun build",
+    "init": "madrun init",
+    "minify": "madrun minify",
+    "wisdom": "madrun wisdom",
+    "clean": "madrun clean",
+    "coverage": "madrun coverage",
+    "report": "madrun report",
+    "6to5": "madrun 6to5",
+    "legacy:index": "madrun legacy:index",
+    "bundle:base": "madrun bundle:base",
+    "bundle": "madrun bundle"
   },
   "dependencies": {},
   "license": "MIT",
@@ -49,6 +49,7 @@
     "nodemon": "^1.11.0",
     "nyc": "^11.0.2",
     "redrun": "^6.0.0",
+    "supertape": "^8.9.0",
     "tape": "^4.5.1"
   }
 }
