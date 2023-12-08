@@ -41,7 +41,7 @@
     "browserify": "^17.0.0",
     "buble": "^0.19.2",
     "c8": "^8.0.1",
-    "eslint": "^4.0.0",
+    "eslint": "^8.55.0",
     "eslint-plugin-putout": "^21.0.2",
     "madrun": "^9.4.1",
     "minify": "^10.5.2",
