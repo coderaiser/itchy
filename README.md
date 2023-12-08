@@ -1,4 +1,4 @@
-# itchy [![License][LicenseIMGURL]][LicenseURL] [![NPM version][NPMIMGURL]][NPMURL] [![Dependency Status][DependencyStatusIMGURL]][DependencyStatusURL] [![Build Status][BuildStatusIMGURL]][BuildStatusURL] [![Coverage Status][CoverageIMGURL]][CoverageURL]
+# itchy [![License][LicenseIMGURL]][LicenseURL] [![NPM version][NPMIMGURL]][NPMURL] [![Build Status][BuildStatusIMGURL]][BuildStatusURL] [![Coverage Status][CoverageIMGURL]][CoverageURL]
 
 Drop-in replacement of [async.eachSeries][eachSeries].
 
@@ -25,29 +25,18 @@ itchy([1, 2, 3], iterator, (error) => {
 
 ## Environments
 
-In old `node.js` environments that not fully supports `es2015`, `itchy` could be used with:
-
-```js
-var itchy = require('itchy/legacy');
-```
-
 For using in browser without `browserify`, `webpack` or `rollup` path `node_modules/itchy/dist/itchy.min.js` could be used.
 
 ## License
 
 MIT
 
-[NPMIMGURL]:                https://img.shields.io/npm/v/itchy.svg?style=flat
-[BuildStatusIMGURL]:        https://img.shields.io/travis/coderaiser/itchy/master.svg?style=flat
-[DependencyStatusIMGURL]:   https://img.shields.io/david/coderaiser/itchy.svg?style=flat
-[LicenseIMGURL]:            https://img.shields.io/badge/license-MIT-317BF9.svg?style=flat
-[NPMURL]:                   https://npmjs.org/package/itchy "npm"
-[BuildStatusURL]:           https://travis-ci.org/coderaiser/itchy  "Build Status"
-[DependencyStatusURL]:      https://david-dm.org/coderaiser/itchy "Dependency Status"
-[LicenseURL]:               https://tldrlegal.com/license/mit-license "MIT License"
-
-[CoverageURL]:              https://coveralls.io/github/coderaiser/itchy?branch=master
-[CoverageIMGURL]:           https://coveralls.io/repos/coderaiser/itchy/badge.svg?branch=master&service=github
-
-[eachSeries]:               http://caolan.github.io/async/docs.html#eachSeries
-
+[NPMIMGURL]: https://img.shields.io/npm/v/itchy.svg?style=flat
+[BuildStatusIMGURL]: https://img.shields.io/travis/coderaiser/itchy/master.svg?style=flat
+[LicenseIMGURL]: https://img.shields.io/badge/license-MIT-317BF9.svg?style=flat
+[NPMURL]: https://npmjs.org/package/itchy "npm"
+[BuildStatusURL]: https://travis-ci.org/coderaiser/itchy "Build Status"
+[LicenseURL]: https://tldrlegal.com/license/mit-license "MIT License"
+[CoverageURL]: https://coveralls.io/github/coderaiser/itchy?branch=master
+[CoverageIMGURL]: https://coveralls.io/repos/coderaiser/itchy/badge.svg?branch=master&service=github
+[eachSeries]: http://caolan.github.io/async/docs.html#eachSeries

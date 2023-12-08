@@ -13,7 +13,6 @@ module.exports = {
         'clean',
         'init',
         '6to5',
-        'legacy:*',
         'bundle',
         'minify',
     ]),
@@ -24,7 +23,6 @@ module.exports = {
     'coverage': () => 'c8 npm test',
     'report': () => 'c8 report --reporter=text-lcov | coveralls',
     '6to5': () => 'buble lib -o legacy/lib',
-    'legacy:index': () => `echo "module.exports = require('./lib/itchy');" > legacy/index.js`,
     'bundle:base': () => 'browserify -s itchy --ng false',
-    'bundle': () => run('bundle:base', '-r ./legacy/lib/itchy.js:itchy ./legacy/lib/itchy.js -o dist/itchy.js'),
+    'bundle': () => run('bundle:base', '-r ./lib/itchy.js:itchy ./lib/itchy.js -o dist/itchy.js'),
 };
