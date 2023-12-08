@@ -23,6 +23,7 @@
     "watch:test": "madrun watch:test",
     "watch:coverage": "madrun watch:coverage",
     "lint": "madrun lint",
+    "fix:lint": "madrun fix:lint",
     "build": "madrun build",
     "init": "madrun init",
     "minify": "madrun minify",
@@ -47,6 +48,7 @@
     "minify": "^10.5.2",
     "mkdirp": "^3.0.1",
     "nodemon": "^3.0.2",
-    "supertape": "^8.9.0"
+    "supertape": "^8.9.0",
+    "try-catch": "^3.0.1"
   }
 }
