@@ -1,0 +1,29 @@
+2023.12.08, v2.0.0
+
+feature:
+- 0d2031d rm legacy
+- aa18750 itchy: try-catch v3.0.1
+- 98c45a6 itchy: buble v0.20.0
+- e2208ef itchy: eslint v8.55.0
+- b91bcb4 itchy: mkdirp v3.0.1
+- 1c5ce10 itchy: nodemon v3.0.2
+- f783da9 itchy: minify v10.5.2
+- 4ab3a74 itchy: browserify v17.0.0
+- 351625a itchy: c8 v8.0.1
+- 5c17ed1 itchy: c8 v8.0.1
+- 076b511 itchy: supertape v8.9.0
+- 08f6926 itchy: eslint-plugin-putout v21.0.2
+- d5918d6 itchy: madrun v9.4.1
+- 40fb79a (package) redrun v6.0.0
+- f5bfd1f (package) buble v0.19.2
+- c3dbe4c (package) browserify v16.0.0
+- 9a09ee2 (package) browserify v15.2.0
+- 1d02c75 (package) buble v0.18.0
+- 6ac47e6 (package) buble v0.17.0
+- 4c3315c (package) coveralls v3.0.0
+- e704410 (package) buble v0.16.0
+- 65a7ad4 (package) minify v3.0.0
+- 79cb954 (package) eslint v4.0.0
+- 1fc2abe (package) nyc v11.0.2
+- 4021779 (package) browserify v14.0.0
+- cfa75d6 (package) bubule v0.15.1
