@@ -1,23 +1,28 @@
 'use strict';
 
-const test = require('tape');
+const tryCatch = require('try-catch');
+const test = require('supertape');
 const itchy = require('..');
 const empty = () => {};
 
 test('itchy: args: array', (t) => {
-    t.throws(itchy, /array should be an array!/, 'should throw when no arguments');
+    const [error] = tryCatch(itchy);
+    
+    t.equal(error.message, 'array should be an array!', 'should throw when no arguments');
     t.end();
 });
 
 test('itchy: args: iterator', (t) => {
-    const fn = () => itchy([]);
-    t.throws(fn, /iterator should be a function!/, 'should throw when iterator not a function');
+    const [error] = tryCatch(itchy, []);
+    
+    t.equal(error.message, 'iterator should be a function!', 'should throw when iterator not a function');
     t.end();
 });
 
 test('itchy: args: done', (t) => {
-    const fn = () => itchy([], empty);
-    t.throws(fn, /done should be a function!/, 'should throw when done is not a function');
+    const [error] = tryCatch(itchy, [], empty);
+    
+    t.equal(error.message, 'done should be a function!', 'should throw when done is not a function');
     t.end();
 });
 
@@ -41,4 +46,3 @@ test('itchy: done', (t) => {
     
     itchy(array, empty, done);
 });
-
