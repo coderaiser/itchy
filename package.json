@@ -40,6 +40,7 @@
   "devDependencies": {
     "browserify": "^16.0.0",
     "buble": "^0.19.2",
+    "c8": "^8.0.1",
     "coveralls": "^3.0.0",
     "eslint": "^4.0.0",
     "eslint-plugin-putout": "^21.0.2",
@@ -47,9 +48,7 @@
     "minify": "^3.0.0",
     "mkdirp": "^0.5.1",
     "nodemon": "^1.11.0",
-    "nyc": "^11.0.2",
     "redrun": "^6.0.0",
-    "supertape": "^8.9.0",
-    "tape": "^4.5.1"
+    "supertape": "^8.9.0"
   }
 }
