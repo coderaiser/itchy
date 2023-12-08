@@ -39,7 +39,7 @@
   "license": "MIT",
   "devDependencies": {
     "browserify": "^17.0.0",
-    "buble": "^0.19.2",
+    "buble": "^0.20.0",
     "c8": "^8.0.1",
     "eslint": "^8.55.0",
     "eslint-plugin-putout": "^21.0.2",
